@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage("Compile") {
       steps {
+	env.JAVA_HOME = '/usr/java/jdk1.8.0_181-amd64/'
         sh "./gradlew compileJava"
       }
     }
