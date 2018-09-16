@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'centos-jenkins' }
+  agent { label 'production-server' }
 	
   triggers {
     pollSCM('* * * * *')
