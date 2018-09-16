@@ -51,7 +51,7 @@ pipeline {
 
     stage("Docker build") {
       steps {
-        sh "docker build -t hextrim/calculator:${BUILD_TIMESTAMP} ."
+        sh "docker build -t hextrim/calculator:${BUILD_TIMESTAMP_PATH} ."
       }
     }
 
