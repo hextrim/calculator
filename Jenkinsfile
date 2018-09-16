@@ -51,13 +51,13 @@ pipeline {
 
     stage("Docker build") {
       steps {
-        sh "docker build -t leszko/calculator:${BUILD_TIMESTAMP} ."
+        sh "docker build -t hextrim/calculator:${BUILD_TIMESTAMP} ."
       }
     }
 
     stage("Docker login") {
       steps {
-        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'leszko',
+        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'docker_hub',
                           usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
           sh "docker login --username $USERNAME --password $PASSWORD"
         }
@@ -66,7 +66,7 @@ pipeline {
 
     stage("Docker push") {
       steps {
-        sh "docker push leszko/calculator:${BUILD_TIMESTAMP}"
+        sh "docker push hextrim/calculator:${BUILD_TIMESTAMP}"
       }
     }
 
