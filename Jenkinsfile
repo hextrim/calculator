@@ -85,17 +85,17 @@ pipeline {
 	  
     // Performance test stages
 
-    stage("Release") {
-      steps {
-        sh "ansible-playbook playbook.yml -i inventory/production"
-        sleep 60
-      }
-    }
+ //   stage("Release") {
+ //     steps {
+ //       sh "ansible-playbook playbook.yml -i inventory/production"
+ //       sleep 60
+ //     }
+ //   }
 
-    stage("Smoke test") {
-      steps {
-	sh "./smoke_test.sh 192.168.0.115"
-      }
-    }
+//    stage("Smoke test") {
+//      steps {
+//	sh "./smoke_test.sh 192.168.0.115"
+//      }
+//    }
   }
 }
