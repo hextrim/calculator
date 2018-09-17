@@ -18,6 +18,7 @@
   - name: install Docker Compose
     pip:
       name: docker-compose
+      version: 1.9.0
   - name: copy docker-compose.yml
     copy:
       src: ./docker-compose.yml
