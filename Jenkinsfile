@@ -7,7 +7,6 @@ pipeline {
 	
   environment {
         JAVA_HOME = '/usr/java/jdk1.8.0_141/'
-	// JAVA_HOME = '/usr/java/jdk1.8.0_181-amd64/'
     }
 	
   stages {
