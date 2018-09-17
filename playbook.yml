@@ -13,4 +13,4 @@
       src: ./docker-compose.yml
       dest: ./docker-compose.yml
   - name: run docker-compose
-    command: /usr/local/bin/docker-compose -d up
+    command: /usr/local/bin/docker-compose up -d
